@@ -1,7 +1,7 @@
 # tuneup
 
-> A Claude Code skill that turns a fuzzy request into a high-information-density prompt — no prompt-engineering knowledge required from the user.
-> 一个把模糊需求翻译成高信息密度 Prompt 的 Claude Code skill——用户不需要懂 prompt 工程。
+> An Agent Skill (SKILL.md format) that turns a fuzzy request into a high-information-density prompt — no prompt-engineering knowledge required from the user.
+> 一个把模糊需求翻译成高信息密度 Prompt 的 Agent Skill（SKILL.md 格式）——用户不需要懂 prompt 工程。跑在 Claude Code 里，但不是 Claude Code 专属——任何实现了 SKILL.md 加载约定的 harness 都能用。
 
 The user most likely to need TuneUp doesn't know the word "prompt." They're just repeating themselves, rephrasing, getting frustrated that the AI isn't getting it. TuneUp's job is to notice that pattern and step in — not to teach prompt engineering, but to get the user the output they actually wanted.
 
@@ -20,11 +20,13 @@ The user most likely to need TuneUp doesn't know the word "prompt." They're just
 
 ## Install
 
+For Claude Code:
+
 ```bash
 git clone https://github.com/AgentGameLab/tuneup.git ~/.claude/skills/tuneup
 ```
 
-Claude Code auto-discovers the skill from its `SKILL.md` front-matter.
+Claude Code auto-discovers the skill from its `SKILL.md` front-matter. Any other harness that reads the same SKILL.md convention can load it from its own skills directory the same way.
 
 ## Layout
 
