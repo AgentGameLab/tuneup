@@ -1,3 +1,6 @@
+> **This skill now lives in [AgentGameLab/skills](https://github.com/AgentGameLab/skills)**, together with our other agent skills, as one installable Claude Code plugin — `/plugin marketplace add AgentGameLab/skills`. This repo stays up and still works standalone, but new versions land there.
+> **本 skill 已迁入 [AgentGameLab/skills](https://github.com/AgentGameLab/skills)** 单仓，与其余 skill 合并为一个可安装的 Claude Code plugin。本仓保留可用，但后续更新只发新仓。
+
 # tuneup
 
 > An Agent Skill (SKILL.md format) that turns a fuzzy request into a high-information-density prompt — no prompt-engineering knowledge required from the user.
