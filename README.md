@@ -23,9 +23,9 @@ The user most likely to need TuneUp doesn't know the word "prompt." They're just
 
 ## Use
 
-`/tuneup <task>` optimizes your request and immediately completes the task. TuneUp automatically supplies the relevant expert perspective when professional judgment is needed; you do not need to write a role introduction. To receive only a reusable prompt, say “只给 prompt” or “先别执行”.
+`/tuneup <task>` optimizes your request and immediately completes the task. TuneUp automatically supplies the relevant expert perspective when professional judgment is needed; you do not need to write a role introduction.
 
-`/tuneup <需求>` 默认优化输入后直接执行；专业任务自动补足专家视角。明确说“只给 prompt”“先别执行”或“做成模板”时，只交付指令稿。
+`/tuneup <需求>` 优化输入后直接执行，交付任务结果；专业视角按现有规则自动补足。
 
 ## Install
 
