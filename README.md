@@ -21,6 +21,12 @@ The user most likely to need TuneUp doesn't know the word "prompt." They're just
 
 **Recipe mode** — on request, turns a one-off prompt into a reusable parameterized template.
 
+## Use
+
+`/tuneup <task>` optimizes your request and immediately completes the task. TuneUp automatically supplies the relevant expert perspective when professional judgment is needed; you do not need to write a role introduction. To receive only a reusable prompt, say “只给 prompt” or “先别执行”.
+
+`/tuneup <需求>` 默认优化输入后直接执行；专业任务自动补足专家视角。明确说“只给 prompt”“先别执行”或“做成模板”时，只交付指令稿。
+
 ## Install
 
 For Claude Code:
