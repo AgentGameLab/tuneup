@@ -45,8 +45,12 @@ tuneup/
 └── references/
     ├── quadrant-matrix.md            # full classification matrix for the 4 forging styles
     ├── lisp-patterns.md              # Lisp-style prompt pattern library (loaded only for quadrant 4)
-    └── domain-expert-lens.md         # domain expert equipping manual + safety-boundary templates
+    ├── domain-expert-lens.md         # domain expert equipping manual + safety-boundary templates
+    ├── theory-anchors.md             # theory-name dictionary, jargon translation table, misuse blacklist
+    └── artifact-tasks.md             # seven-item checklist for tasks whose deliverable must run or be seen
 ```
+
+`evals/evals.json` holds the regression prompts and assertions.
 
 References are loaded on demand (progressive disclosure) — most requests never touch them.
 
