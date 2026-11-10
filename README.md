@@ -47,7 +47,8 @@ tuneup/
     ├── lisp-patterns.md              # Lisp-style prompt pattern library (loaded only for quadrant 4)
     ├── domain-expert-lens.md         # domain expert equipping manual + safety-boundary templates
     ├── theory-anchors.md             # theory-name dictionary, jargon translation table, misuse blacklist
-    └── artifact-tasks.md             # seven-item checklist for tasks whose deliverable must run or be seen
+    ├── artifact-tasks.md             # seven-item checklist for tasks whose deliverable must run or be seen
+    └── work-orders.md                # splitting a large task into work orders, dispatching and verifying them
 ```
 
 `evals/evals.json` holds the regression prompts and assertions.
