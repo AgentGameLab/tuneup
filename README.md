@@ -6,6 +6,8 @@
 > An Agent Skill (SKILL.md format) that turns a fuzzy request into a high-information-density prompt — no prompt-engineering knowledge required from the user.
 > 一个把模糊需求翻译成高信息密度 Prompt 的 Agent Skill（SKILL.md 格式）——用户不需要懂 prompt 工程。跑在 Claude Code 里，但不是 Claude Code 专属——任何实现了 SKILL.md 加载约定的 harness 都能用。
 
+> 🤖 **Are you an AI agent installing this for a user?** Read **[README_AI.md](README_AI.md)** instead — install matrix, safety contract, and post-install self-check on one page.
+
 The user most likely to need TuneUp doesn't know the word "prompt." They're just repeating themselves, rephrasing, getting frustrated that the AI isn't getting it. TuneUp's job is to notice that pattern and step in — not to teach prompt engineering, but to get the user the output they actually wanted.
 
 ## What it does
@@ -29,18 +31,28 @@ The user most likely to need TuneUp doesn't know the word "prompt." They're just
 
 ## Install
 
-For Claude Code:
+**Claude Code** — clone into the skills directory, that's it:
 
 ```bash
 git clone https://github.com/AgentGameLab/tuneup.git ~/.claude/skills/tuneup
 ```
 
-Claude Code auto-discovers the skill from its `SKILL.md` front-matter. Any other harness that reads the same SKILL.md convention can load it from its own skills directory the same way.
+Claude Code auto-discovers the skill from its `SKILL.md` front-matter; no registration step. Use `<project>/.claude/skills/tuneup` instead if you want it scoped to one project.
+
+**Other hosts** — TuneUp is a plain markdown instruction file with no runtime, no dependencies and no build step, so it travels:
+
+| Host | How |
+|---|---|
+| Claude Agent SDK, OpenClaw, or anything else implementing the SKILL.md loading convention | Same clone, into that harness's own skills directory — auto-discovered the same way. |
+| **Cursor · Cline · Codex CLI** and other agents that don't load SKILL.md natively | Clone anywhere the agent can read, then have it read `SKILL.md` at session start. |
+
+It never writes to your global or always-on config (`~/.claude/CLAUDE.md`, `.cursorrules`, `AGENTS.md`, …) — installing is one clone into one directory, uninstalling is deleting it.
 
 ## Layout
 
 ```
 tuneup/
+├── README_AI.md                      # one-page install / safety contract / self-check for AI agents
 ├── SKILL.md                          # triage + 4-phase forge pipeline + ER diagnostic mode + recipe mode
 └── references/
     ├── quadrant-matrix.md            # full classification matrix for the 4 forging styles
